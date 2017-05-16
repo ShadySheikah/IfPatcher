@@ -1,0 +1,62 @@
+0000	DummyTitle
+0001	Hoshidan Kingdom
+0002	Nohrian Kingdom
+0003	Invisible Kingdom
+0004	Special Edition (IK)
+0005	Reserved
+0006	Reserved
+0007	Reserved
+0008	E000
+0009	Treasure of the Ruins
+000A	Terrifying Spirit Mountain
+000B	Duelist Museum
+000C	Paradise Scramble
+000D	Battle for the Strongest Royal
+000E	Encounter with Awakening
+000F	Invisible History - Beginning
+0010	Invisible History - Conclusion
+0011	E009
+0012	E010
+0013	E011
+0014	E012
+0015	E013
+0016	Reserved
+0017	Reserved
+0018	Reserved
+0019	Reserved
+001A	Reserved
+001B	Reserved
+001C	Reserved
+001D	Cypher Marth
+001E	Cypher Lucina
+001F	Cypher Minerva
+0020	Reserved
+0021	Reserved
+0022	Reserved
+0023	Reserved
+0024	Reserved
+0025	Reserved
+0026	Reserved
+0027	Vanguard's Trial
+0028	Anna the Thief
+0029	Reserved
+002A	Reserved
+002B	Reserved
+002C	Reserved
+002D	Reserved
+002E	Reserved
+002F	Reserved
+0030	Reserved
+0031	Ballistician's Trial
+0032	Witches' Trial
+0033	Anna's Gift
+0034	Reserved
+0035	Anna's Second Gift
+0036	Hoshidan Festival of Bonds
+0037	Nohrian Festival of Bonds
+0038	Ephemeral Memories #1
+0039	Ephemeral Memories #2
+003A	Ephemeral Memories #3
+003B	Ephemeral Memories #4
+003C	Ephemeral Memories #5
+003D	Ephemeral Memories #6

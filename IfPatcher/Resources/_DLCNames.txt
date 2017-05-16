@@ -1,0 +1,62 @@
+0000.0000006B	DummyTitle
+0001.00000017	Hoshidan Kingdom
+0002.00000018	Nohrian Kingdom
+0003.00000019	Invisible Kingdom
+0004.0000001A	Special Edition (IK)
+0005.00000005	Reserved
+0006.00000006	Reserved
+0007.00000007	Reserved
+0008.00000025	E000
+0009.0000001C	Treasure of the Ruins
+000A.0000001D	Terrifying Spirit Mountain
+000B.00000042	Duelist Museum
+000C.0000001F	Paradise Scramble
+000D.00000020	Battle for the Strongest Royal
+000E.00000029	Encounter with Awakening
+000F.0000003F	Invisible History - Beginning
+0010.00000040	Invisible History - Conclusion
+0011.0000002C	E009
+0012.0000002D	E010
+0013.0000002E	E011
+0014.0000002F	E012
+0015.00000030	E013
+0016.00000031	Reserved
+0017.00000032	Reserved
+0018.00000033	Reserved
+0019.00000034	Reserved
+001A.00000035	Reserved
+001B.00000036	Reserved
+001C.00000037	Reserved
+001D.00000038	Cypher Marth
+001E.00000039	Cypher Lucina
+001F.0000003A	Cypher Minerva
+0020.00000043	Reserved
+0021.00000044	Reserved
+0022.00000045	Reserved
+0023.00000046	Reserved
+0024.00000047	Reserved
+0025.00000048	Reserved
+0026.00000049	Reserved
+0027.0000004A	Vanguard's Trial
+0028.00000057	Anna the Thief
+0029.0000004C	Reserved
+002A.0000004D	Reserved
+002B.0000004E	Reserved
+002C.0000004F	Reserved
+002D.00000050	Reserved
+002E.00000051	Reserved
+002F.00000052	Reserved
+0030.00000053	Reserved
+0031.0000005E	Ballistician's Trial
+0032.0000005F	Witches' Trial
+0033.0000005A	Anna's Gift
+0034.00000060	Reserved
+0035.00000061	Anna's Second Gift
+0036.00000063	Hoshidan Festival of Bonds
+0037.0000006C	Nohrian Festival of Bonds
+0038.00000065	Ephemeral Memories #1
+0039.00000066	Ephemeral Memories #2
+003A.00000067	Ephemeral Memories #3
+003B.0000006D	Ephemeral Memories #4
+003C.0000006E	Ephemeral Memories #5
+003D.0000006F	Ephemeral Memories #6
