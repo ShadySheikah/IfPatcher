@@ -117,8 +117,25 @@ namespace IfPatcher.Model
             //No need for game copy anymore
             File.Delete(tempGame);
 
+            //Verify we have the file we need
+            FileInfo[] dir = new DirectoryInfo(Workspace.TempDir).GetFiles("tmp.*");
+            if (dir.Length != 2)
+                throw new Exception("Unpacked content was not what was expected.\nPlease ensure the provided CIA is not an update or DLC file.");
+
+            string cxiName = string.Empty, cfaName = string.Empty;
+            foreach (FileInfo fi in dir)
+            {
+                if (fi.Name.Contains(".0000."))
+                    cxiName = fi.Name;
+                else if (fi.Name.Contains(".0001."))
+                    cfaName = fi.Name;
+            }
+
+            if (cxiName == string.Empty || cfaName == string.Empty)
+                throw new Exception("Expected content not present.\nPlease make sure the provided CIA file is decrypted and valid.");
+
             //Grab serial
-            string cxiPath = Path.Combine(Workspace.TempDir, "tmp.0000.00000000");
+            string cxiPath = Path.Combine(Workspace.TempDir, cxiName);
             if (!File.Exists(cxiPath))
                 throw new Exception("Could not find necessary data.\nMake sure the provided CIA is decrypted and not an update or DLC file.");
 
@@ -137,7 +154,7 @@ namespace IfPatcher.Model
             //Extract the rest
             cont.AppendLog("Extracting game content. This will take some time...");
             ctrtool.StartInfo.FileName = "3dstool.exe";
-            ctrtool.StartInfo.Arguments = "-xvtf cxi tmp.0000.00000000 --header ncchheader.bin --exh exheader.bin --plain plain.bin --exefs exe.bin --romfs rom.bin --logo logo.bin";
+            ctrtool.StartInfo.Arguments = $"-xvtf cxi {cxiName} --header ncchheader.bin --exh exheader.bin --plain plain.bin --exefs exe.bin --romfs rom.bin --logo logo.bin";
             ctrtool.Start();
             ctrtool.WaitForExit();
 
@@ -162,8 +179,8 @@ namespace IfPatcher.Model
                 throw new Exception("Could not extract data.\nMake sure the CIA file is decrypted before attempting to patch it.");
 
             //Clean up
-            File.Move(Path.Combine(Workspace.TempDir, "tmp.0001.00000001"), Path.Combine(Workspace.TempDir, "manual.cfa"));
-            File.Delete(Path.Combine(Workspace.TempDir, "tmp.0000.00000000"));
+            File.Move(Path.Combine(Workspace.TempDir, cfaName), Path.Combine(Workspace.TempDir, "manual.cfa"));
+            File.Delete(Path.Combine(Workspace.TempDir, cxiName));
             File.Delete(Path.Combine(Workspace.TempDir, "exe.bin"));
             File.Delete(Path.Combine(Workspace.TempDir, "rom.bin"));
         }
