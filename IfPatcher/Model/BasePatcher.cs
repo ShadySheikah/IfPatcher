@@ -278,6 +278,7 @@ namespace IfPatcher.Model
             cont.AppendLog("Cleaning up...");
             string mPath = Path.Combine(tempRom, "m");
             var m = new DirectoryInfo(mPath);
+            var movie = new DirectoryInfo(Path.Combine(tempRom, "movie"));
 
             switch (version)
             {
@@ -285,14 +286,23 @@ namespace IfPatcher.Model
                     foreach (DirectoryInfo di in m.GetDirectories())
                         if (di.Name == "B" || di.Name == "C")
                             Directory.Delete(di.FullName, true);
+                    foreach(DirectoryInfo di in movie.GetDirectories())
+                        if (di.Name == "B" || di.Name == "C")
+                            Directory.Delete(di.FullName, true);
                     break;
                 case GameVersion.JPN_Nohr:
                     foreach (DirectoryInfo di in m.GetDirectories())
                         if (di.Name == "A" || di.Name == "C")
                             Directory.Delete(di.FullName, true);
+                    foreach(DirectoryInfo di in movie.GetDirectories())
+                        if (di.Name == "A" || di.Name == "C")
+                            Directory.Delete(di.FullName, true);
                     break;
                 case GameVersion.JPN_Special:
                     foreach (DirectoryInfo di in m.GetDirectories())
+                        if (di.Name == "C")
+                            Directory.Delete(di.FullName, true);
+                    foreach(DirectoryInfo di in movie.GetDirectories())
                         if (di.Name == "C")
                             Directory.Delete(di.FullName, true);
                     break;
@@ -306,10 +316,16 @@ namespace IfPatcher.Model
                     foreach (DirectoryInfo di in m.GetDirectories())
                         if (di.Name == "B" || di.Name == "C")
                             Directory.Delete(di.FullName, true);
+                    foreach(DirectoryInfo di in movie.GetDirectories())
+                        if (di.Name == "B" || di.Name == "C")
+                            Directory.Delete(di.FullName, true);
                     break;
                 case GameVersion.USA_Nohr:
                 case GameVersion.EUR_Nohr:
                     foreach (DirectoryInfo di in m.GetDirectories())
+                        if (di.Name == "A" || di.Name == "C")
+                            Directory.Delete(di.FullName, true);
+                    foreach(DirectoryInfo di in movie.GetDirectories())
                         if (di.Name == "A" || di.Name == "C")
                             Directory.Delete(di.FullName, true);
                     break;

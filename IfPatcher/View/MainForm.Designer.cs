@@ -54,13 +54,13 @@
             // 
             // TC_PatchMode
             // 
-            this.TC_PatchMode.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.TC_PatchMode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TC_PatchMode.Controls.Add(this.T_Game);
             this.TC_PatchMode.Controls.Add(this.T_DLC);
             this.TC_PatchMode.Location = new System.Drawing.Point(12, 51);
+            this.TC_PatchMode.Multiline = true;
             this.TC_PatchMode.Name = "TC_PatchMode";
             this.TC_PatchMode.SelectedIndex = 0;
             this.TC_PatchMode.Size = new System.Drawing.Size(410, 348);
@@ -74,7 +74,7 @@
             this.T_Game.Controls.Add(this.TB_Progress);
             this.T_Game.Controls.Add(this.PB_PatchProgress);
             this.T_Game.Controls.Add(this.B_ApplyPatch);
-            this.T_Game.Location = new System.Drawing.Point(4, 4);
+            this.T_Game.Location = new System.Drawing.Point(4, 22);
             this.T_Game.Name = "T_Game";
             this.T_Game.Padding = new System.Windows.Forms.Padding(3);
             this.T_Game.Size = new System.Drawing.Size(402, 322);
@@ -155,7 +155,7 @@
             this.T_DLC.Controls.Add(this.label3);
             this.T_DLC.Controls.Add(this.TB_ContentPath);
             this.T_DLC.Controls.Add(this.B_PatchDLC);
-            this.T_DLC.Location = new System.Drawing.Point(4, 4);
+            this.T_DLC.Location = new System.Drawing.Point(4, 22);
             this.T_DLC.Name = "T_DLC";
             this.T_DLC.Padding = new System.Windows.Forms.Padding(3);
             this.T_DLC.Size = new System.Drawing.Size(402, 322);
@@ -241,6 +241,7 @@
             this.TB_PatchPath.Name = "TB_PatchPath";
             this.TB_PatchPath.Size = new System.Drawing.Size(378, 20);
             this.TB_PatchPath.TabIndex = 11;
+            this.TB_PatchPath.Text = "Patch folder contains the \"exe\", \"rom\", and \"dlc\" directories.";
             this.TB_PatchPath.TextChanged += new System.EventHandler(this.TB_TextChanged);
             // 
             // B_BrowsePatch
