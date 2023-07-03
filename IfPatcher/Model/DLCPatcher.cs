@@ -72,14 +72,16 @@ namespace IfPatcher.Model
                 string[] indexId = Path.GetFileName(path).Substring(4).Split('.');
                 var patchable = false;
                 foreach (string str in dlcPaths)
+                {
                     if (str.Contains($"{indexId[0]}.{indexId[1]}"))
                         patchable = true;
+                }
 
                 contentList.Add(new ContentData(indexId[0], indexId[1], patchable));
             }
 
             GetContentIcons();
-            return contentList;
+            return contentList.Where(a => !a.Name.Contains("Dummy")).ToList();
         }
 
         private void GetContentIcons()
@@ -116,10 +118,10 @@ namespace IfPatcher.Model
                 throw new Exception("Could not read content info archive.");
 
             //Find icons
-            for (int i = 0; i < contentList.Count; i++)
+            foreach(var contentData in contentList)
             {
                 //Get the icon index
-                uint iconIndex = BitConverter.ToUInt32(archive, 0xC8 + 0xC8 * i);
+                uint iconIndex = BitConverter.ToUInt32(archive, 0xC8 + 0xC8 * contentData.IconIndex);
                 if (iconIndex == 0)
                     iconIndex = 22;
 
@@ -135,7 +137,7 @@ namespace IfPatcher.Model
                 using (var stream = new MemoryStream(iconData))
                     icon = ImageUtil.ReadImageFromStream(stream, 48, 48, ImageUtil.PixelFormat.RGB565);
 
-                contentList[i].Icon = icon;
+                contentData.Icon = icon;
             }
         }
 

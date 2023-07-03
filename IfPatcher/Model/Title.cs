@@ -17,12 +17,15 @@ namespace IfPatcher.Model
 
         public bool Patchable;
         public bool WillPatch;
+
+        public int IconIndex;
         public Image Icon;
 
         public ContentData(string index, string id, bool patchable)
         {
             Name = TranslateName(index) ?? "???";
             Index = index;
+            IconIndex = Convert.ToInt32(Index, 16);
             ID = id;
             WillPatch = Patchable = patchable;
         }
